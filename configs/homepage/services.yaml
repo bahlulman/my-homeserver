@@ -1,0 +1,108 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+- Infrastructures:
+    - Nginx Proxy Manager:
+        icon: nginx-proxy-manager
+        href: https://proxmanager.daffy.lan
+        description: Domain Traffic Controller
+        container: nginx-proxy-manager
+        widget:
+          type: npm
+          url: https://proxmanager.daffy.lan
+          username: abiyyu140@gmail.com
+          password: daffy140
+
+    - AdGuard Home:
+        icon: adguard-home
+        href: https://adguard.daffy.lan
+        description: DNS Adblocker
+        container: adguardhome
+        widget:
+          type: adguard
+          url: https://adguard.daffy.lan
+          username: daffy
+          password: daffy789
+
+    - qBittorrent:
+        icon: qbittorrent
+        href: https://loot.daffy.lan
+        description: My Beloved Ship
+        container: qbittorrent
+        widget:
+          type: qbittorrent
+          url: https://loot.daffy.lan
+          username: daffy
+          password: daffy7896541233
+#          enableLeechProgress: true
+#          enableLeechSize: true
+
+- Automation:
+    - Radarr:
+        icon: radarr
+        href: https://radar.daffy.lan
+        description: Movie Manager
+        container: radarr
+        widget:
+          type: radarr
+          url: https://radar.daffy.lan
+          key: d955106e76ab4419b8d078972c692d7f
+
+    - Seerr:
+        icon: seerr
+        href: https://seerr.daffy.lan
+        description: Media Request Manager
+        container: seerr
+        widget:
+          type: seerr
+          url: https://seerr.daffy.lan
+          key: MTc3Njc4MjM5MjUzM2U5N2E5ZDdkLTg5NDYtNDc2NS1iYzVmLWYzMzU5MjlhNzEwNw==
+
+    - Sonarr:
+        icon: sonarr
+        href: https://sonar.daffy.lan
+        description: Series Manager
+        container: sonarr
+        widget:
+          type: sonarr
+          url: https://sonar.daffy.lan
+          key: d8ba54673be74144b61b50133359404c
+
+- Media and Files:
+    - Jellyfin:
+        icon: jellyfin
+        href: https://cinema.daffy.lan
+        description: Personal Cinema
+        container: jellyfin
+        statusStyle: "dot"
+        widget:
+          type: jellyfin
+          url: https://cinema.daffy.lan
+          key: 4ee5c50adf924c63a5dabc5c58fc6684
+          enableBlocks: true
+
+    - Navidrome:
+        icon: navidrome
+        href: https://music.daffy.lan
+        description: Personal Spotify
+        container: navidrome
+        statusStyle: "dot"
+        widget:
+          type: navidrome
+          url: https://music.daffy.lan
+          user: daffy
+          token: 93baf94d223b00568f654398b058c5d9
+          salt: 456yffad
+
+    - Filebrowser:
+        icon: filebrowser
+        href: https://files.daffy.lan
+        description: Personal Drive
+        container: filebrowser
+        statusStyle: "dot"
+        widget:
+          type: filebrowser
+          url: https://files.daffy.lan
+          username: admin
+          password: daffy7896541233

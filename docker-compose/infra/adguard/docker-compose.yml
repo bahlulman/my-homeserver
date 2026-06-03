@@ -1,0 +1,11 @@
+services:
+  adguardhome:
+    image: adguard/adguardhome
+    container_name: adguardhome
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      - ./work:/opt/adguardhome/work
+      - ./conf:/opt/adguardhome/conf
+    labels:
+      - "com.centurylinklabs.watchtower.enable=false"

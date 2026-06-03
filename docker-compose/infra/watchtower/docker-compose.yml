@@ -1,0 +1,15 @@
+version: "3"
+services:
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    environment:
+      - TZ=Asia/Jakarta
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_INCLUDE_RESTARTING=true
+      # Watchtower akan patroli setiap hari jam 04:00 pagi WIB
+      - WATCHTOWER_SCHEDULE=0 0 4 * * *
+      - DOCKER_API_VERSION=1.41
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped

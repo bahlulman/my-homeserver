@@ -1,0 +1,23 @@
+services:
+  metube:
+    image: ghcr.io/alexta69/metube:latest
+    container_name: metube
+    user: "1000:1000"
+    restart: unless-stopped
+    networks:
+      - npm-net
+#    ports:
+      # Port luarnya pakai 8181 biar aman nggak nabrak aplikasi lain
+#      - "8181:8081"
+    volumes:
+      # Jalur ajaib: Hasil download langsung masuk ke folder media YouTube kamu
+      - ~/media/musics:/downloads
+      - ./cookies.txt:/cookies.txt
+    environment:
+#      - OUTPUT_TEMPLATE=%(title)s.%(ext)s
+      # --- TAMBAH BARIS INI (Menyuruh mesin pakai cookies tersebut) ---
+      - YTDL_OPTIONS={"cookiefile":"/cookies.txt"}
+
+networks:
+  npm-net:
+    external: true

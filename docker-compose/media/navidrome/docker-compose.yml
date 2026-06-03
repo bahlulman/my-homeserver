@@ -1,0 +1,25 @@
+services:
+  navidrome:
+    image: deluan/navidrome:latest
+    container_name: navidrome
+    user: 1000:1000 # should be owner of volumes
+#    ports:
+#      - "4533:4533"
+    restart: unless-stopped
+    environment:
+      # Optional: put your config options customization here. Examples:
+      - ND_LOGLEVEL=info
+      - ND_SESSIONTIMEOUT=24h
+      - ND_BASEURL=
+      - ND_ENABLETRANSCODINGCONFIG=true
+      - ND_LYRICSPRIORITY=.lrc
+      - TZ=Asia/Jakarta
+    volumes:
+      - ./config:/data
+      - ~/media/musics:/music:ro
+    networks:
+      - npm-net
+
+networks:
+  npm-net:
+    external: true

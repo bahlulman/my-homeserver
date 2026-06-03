@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable Dell BIOS Fan Control
+After=syslog.target multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/daffy/dell-bios-fan-control/dell-bios-fan-control 0
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

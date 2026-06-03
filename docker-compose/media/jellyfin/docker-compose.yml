@@ -1,0 +1,27 @@
+services:
+  jellyfin:
+    image: jellyfin/jellyfin:latest
+    container_name: jellyfin
+    user: 1000:1000
+    # Tambahkan baris ini, ganti 109 dengan angka yang kamu dapet dari perintah stat tadi
+    group_add:
+      - "44"
+      - "993"
+    networks:
+      - npm-net
+    devices:
+      # Map kedua device biar aman
+      - /dev/dri/card1:/dev/dri/card1
+      - /dev/dri/renderD128:/dev/dri/renderD128
+#    ports:
+#      - 8096:8096/tcp
+#      - 7359:7359/udp
+    volumes:
+      - ./config:/config
+      - ./cache:/cache
+      - ~/media:/media
+    restart: 'unless-stopped'
+
+networks:
+  npm-net:
+    external: true
