@@ -11,8 +11,8 @@
         widget:
           type: npm
           url: https://proxmanager.daffy.lan
-          username: abiyyu140@gmail.com
-          password: daffy140
+          username: <USERNAME>
+          password: <PASSWORD>
 
     - AdGuard Home:
         icon: adguard-home
@@ -22,8 +22,8 @@
         widget:
           type: adguard
           url: https://adguard.daffy.lan
-          username: daffy
-          password: daffy789
+          username: <USERNAME>
+          password: <PASSWORD>
 
     - qBittorrent:
         icon: qbittorrent
@@ -33,8 +33,8 @@
         widget:
           type: qbittorrent
           url: https://loot.daffy.lan
-          username: daffy
-          password: daffy7896541233
+          username: <USERNAME>
+          password: <PASSWORD>
 #          enableLeechProgress: true
 #          enableLeechSize: true
 
@@ -47,7 +47,7 @@
         widget:
           type: radarr
           url: https://radar.daffy.lan
-          key: d955106e76ab4419b8d078972c692d7f
+          key: <KEY>
 
     - Seerr:
         icon: seerr
@@ -57,7 +57,7 @@
         widget:
           type: seerr
           url: https://seerr.daffy.lan
-          key: MTc3Njc4MjM5MjUzM2U5N2E5ZDdkLTg5NDYtNDc2NS1iYzVmLWYzMzU5MjlhNzEwNw==
+          key: <KEY>
 
     - Sonarr:
         icon: sonarr
@@ -67,7 +67,7 @@
         widget:
           type: sonarr
           url: https://sonar.daffy.lan
-          key: d8ba54673be74144b61b50133359404c
+          key: <KEY>
 
 - Media and Files:
     - Jellyfin:
@@ -79,7 +79,7 @@
         widget:
           type: jellyfin
           url: https://cinema.daffy.lan
-          key: 4ee5c50adf924c63a5dabc5c58fc6684
+          key: <KEY>
           enableBlocks: true
 
     - Navidrome:
@@ -91,9 +91,9 @@
         widget:
           type: navidrome
           url: https://music.daffy.lan
-          user: daffy
-          token: 93baf94d223b00568f654398b058c5d9
-          salt: 456yffad
+          user: <USERNAME>
+          token: <TOKEN>
+          salt: <SALT>
 
     - Filebrowser:
         icon: filebrowser
@@ -104,5 +104,5 @@
         widget:
           type: filebrowser
           url: https://files.daffy.lan
-          username: admin
-          password: daffy7896541233
+          username: <USERNAME>
+          password: <PASSWORD>
